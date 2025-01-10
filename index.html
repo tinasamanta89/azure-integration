@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await API Example</title>
+</head>
+<body>
+    <h1>First 3 Fetched Users</h1>
+    <input type="text" id="getInputValue"/>
+    <p id="printInputVal"></p>
+    <script>
+        document.getElementById("getInputValue").addEventListener( 'input' , function(){
+            const inputVal = this.value;
+            document.getElementById("printInputVal").innerText  = inputVal
+
+        })
+    </script>
+
+
+    <input type="text" id="valueFetch" />
+    <p id="printText"></p>
+
+    <script>
+        document.getElementById("valueFetch").addEventListener("input" , function(){
+            var inputValue = this.value
+            document.getElementById("printText").innerHTML = inputValue
+        })
+    </script>
+
+
+    <select id="oplist" onchange="showDiv()">
+        <option>Select</option>
+        <option value="opn1">option 1</option>
+        <option value="opn2">option 2</option>
+    </select>
+    <div id="opn1">option 1 content</div>
+    <div id="opn2">option 2 content</div>
+
+    <script>
+        function showDiv(){
+            var selectVal = document.getElementById("oplist").value
+            var optn1 = document.getElementById("opn1")
+            var optn2 = document.getElementById("opn2")
+
+            optn1.style.display = "none"
+            optn2.style.display = "none"
+
+            document.getElementById(selectVal).style.display = "block"
+        }
+        document.getElementById("opn1").style.display = "none"
+        document.getElementById("opn2").style.display = "none"
+    </script>
+
+    
+
+
+    
+</body>
+</html>
